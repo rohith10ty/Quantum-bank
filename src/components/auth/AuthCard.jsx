@@ -6,9 +6,9 @@ export default function AuthCard() {
   const [isSignUp, setIsSignUp] = useState(false);
 
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
+    name: "Rohith Naidu",
+    email: "rohith.naidu@quantumbank.com",
+    password: "••••••••••••",
   });
 
   const handleSubmit = (e) => {
@@ -91,37 +91,41 @@ export default function AuthCard() {
         <div className="w-full px-8 py-8 sm:px-10 sm:py-10">
           <div className="flex flex-col items-center gap-6">
             {/* Quantum Bank Brand */}
-            <a href="#" className="flex items-center justify-center gap-2">
-              <svg
-                viewBox="0 0 48 48"
-                className="h-7 w-7"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M24 3L41.5 13.5V34.5L24 45L6.5 34.5V13.5L24 3Z"
-                  fill="#14b8a6"
-                />
+            <div className="flex flex-col items-center gap-2">
+              <div className="flex items-center justify-center gap-2.5">
+                <svg
+                  viewBox="0 0 48 48"
+                  className="h-8 w-8 shrink-0 drop-shadow-[0_2px_8px_rgba(20,184,166,0.35)]"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 3L41.5 13.5V34.5L24 45L6.5 34.5V13.5L24 3Z"
+                    fill="#14b8a6"
+                  />
+                  <path
+                    d="M24 9.5L36 16.5V31.5L24 38.5L12 31.5V16.5L24 9.5Z"
+                    fill="none"
+                    stroke="white"
+                    strokeWidth="2.4"
+                  />
+                  <circle cx="24" cy="24" r="4.5" fill="white" />
+                </svg>
 
-                <path
-                  d="M24 10L35.5 17V31L24 38L12.5 31V17L24 10Z"
-                  fill="none"
-                  stroke="white"
-                  strokeWidth="2"
-                />
-
-                <circle cx="24" cy="24" r="4" fill="white" />
-              </svg>
-
-              <div className="flex items-baseline gap-1">
-                <span className="text-2xl font-bold tracking-tight text-neutral-900">
-                  Quantum
-                </span>
-
-                <span className="text-2xl font-light tracking-tight text-neutral-500">
-                  Bank
-                </span>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-2xl font-bold tracking-tight text-neutral-900">
+                    Quantum
+                  </span>
+                  <span className="text-2xl font-light tracking-tight text-[#14b8a6]">
+                    Bank
+                  </span>
+                </div>
               </div>
-            </a>
+
+              <div className="inline-flex items-center gap-1.5 rounded-full bg-teal-50 border border-teal-200/80 px-2.5 py-0.5 text-[11px] font-medium text-teal-800">
+                <span className="h-1.5 w-1.5 rounded-full bg-teal-500 animate-pulse" />
+                Pre-authorized Demo Access
+              </div>
+            </div>
 
             {/* Auth Form */}
             <form
